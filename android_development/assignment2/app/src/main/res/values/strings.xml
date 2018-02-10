@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="age_hint">Age</string>
+    <string name="email_hint">Email</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="select_major_button">Select Major</string>
+    <string name="done_button">Done</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="major_textField">Major: </string>
+
+
+
+    <string-array name="advanced_degrees">
+        <item>Doctor of Philosophy (Ph.D.)</item>
+        <item>Doctor of Education (Ed.D.)</item>
+        <item>Master of Arts (MA)</item>
+        <item>Master of Science (MS)</item>
+        <item>Master of Fine Arts (MFA)</item>
+    </string-array>
+
+    <string-array name="doctor_of_philosophy">
+        <item>Bioengineering</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Clinical Psychology</item>
+        <item>Computational Science</item>
+        <item>Ecology</item>
+        <item>Education</item>
+        <item>Engineering/Bioengineering</item>
+        <item>Engineering/Electrical and Computer</item>
+        <item>Engineering/Mechanical and Aerospace</item>
+        <item>Engineering/Structural</item>
+        <item>Evolutionary Biology</item>
+        <item>Geography</item>
+        <item>Geophysics</item>
+        <item>Language and Communicative Disorders</item>
+        <item>Mathematics and Science Education</item>
+        <item>Public Health</item>
+    </string-array>
+
+    <string-array name="doctor_of_education">
+        <item>Education Leadership/Pre K-12</item>
+        <item>Education Leader/Post Secondary Community College</item>
+    </string-array>
+
+    <string-array name="master_of_arts">
+        <item>Anthropology</item>
+        <item>Art</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Chicana and Chicano Studies</item>
+        <item>Communication</item>
+        <item>Speech, Language and Hearing Sciences</item>
+        <item>Economics</item>
+        <item>Education</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Interdisciplinary Studies</item>
+        <item>Journalism and Media Studies</item>
+        <item>Latin American Studies</item>
+        <item>Liberal Arts and Sciences</item>
+        <item>Linguistics</item>
+        <item>Mathematics</item>
+        <item>Music</item>
+        <item>Philosophy</item>
+        <item>Physics</item>
+        <item>Political Science</item>
+        <item>Psychology</item>
+        <item>Rhetoric and Writing Studies</item>
+        <item>Sociology</item>
+        <item>Spanish</item>
+        <item>Television, Film and New Media Production</item>
+        <item>Theatre Arts</item>
+        <item>Women's Studies</item>
+    </string-array>
+
+    <string-array name="master_of_science">
+        <item>Accountancy</item>
+        <item>Aerospace Engineering</item>
+        <item>Applied Mathematics</item>
+        <item>Astronomy</item>
+        <item>Bioengineering</item>
+        <item>Biology</item>
+        <item>Bioinformatics and Medical Informatics</item>
+        <item>Biomedical Quality Systems</item>
+        <item>Business Administration</item>
+        <item>Chemistry</item>
+        <item>Child Development</item>
+        <item>Civil Engineering</item>
+        <item>Computational Science</item>
+        <item>Computer Science</item>
+        <item>Counseling</item>
+        <item>Criminal Justice and Criminology</item>
+        <item>Electrical Engineering</item>
+        <item>Excercise Physiology</item>
+        <item>Geography</item>
+        <item>Geological Sciences</item>
+        <item>Gerontology</item>
+        <item>Homeland Security</item>
+        <item>Hospitality and Tourism Management</item>
+        <item>Information Systems</item>
+        <item>Interdisciplinary Studies</item>
+        <item>Kinesiology</item>
+        <item>Mechanical Engineering</item>
+        <item>Medical Physics</item>
+        <item>Microbiology</item>
+        <item>Nursing</item>
+        <item>Nutritional Sciences</item>
+        <item>Physics</item>
+        <item>Psychology</item>
+        <item>Public Health</item>
+        <item>Regulatory Affairs</item>
+        <item>Rehabilitation Counseling</item>
+        <item>Statistics</item>
+    </string-array>
+
+    <string-array name="master_of_fine_arts">
+        <item>Creative Writing</item>
+        <item>Design and Technical Theatre</item>
+        <item>Musical Theatre</item>
+        <item>Theatre Arts</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_button">Back</string>
+
+</resources>
