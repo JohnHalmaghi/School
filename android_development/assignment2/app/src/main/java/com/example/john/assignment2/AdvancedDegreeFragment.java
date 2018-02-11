@@ -1,8 +1,6 @@
 package com.example.john.assignment2;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +12,10 @@ public class AdvancedDegreeFragment extends ListFragment implements AdapterView.
 
     private String[] advancedDegrees;
     private Button cancelButton;
-    private static final String cancelButtonString = "cancel";
+    private static final String CANCEL_BUTTON_STRING = "cancel";
     View view;
 
     public AdvancedDegreeFragment() {
-        // Required empty public constructor
     }
 
 
@@ -29,7 +26,7 @@ public class AdvancedDegreeFragment extends ListFragment implements AdapterView.
         MajorsFragment.ButtonPressedListener listener = (MajorsFragment.ButtonPressedListener)getActivity();
         cancelButton = (Button)view.findViewById(R.id.cancel_button_adv);
         cancelButton.setOnClickListener(view -> {
-            listener.buttonPressed(cancelButtonString);
+            listener.buttonPressed(CANCEL_BUTTON_STRING);
         });
         return view;
     }
@@ -49,6 +46,6 @@ public class AdvancedDegreeFragment extends ListFragment implements AdapterView.
        listener.degreeChosen(position);
     }
     public interface DegreeSelectionListener{
-        public void degreeChosen(int degreeIndex);
+        void degreeChosen(int degreeIndex);
     }
 }

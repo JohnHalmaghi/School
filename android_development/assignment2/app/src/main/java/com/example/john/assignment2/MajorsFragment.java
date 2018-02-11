@@ -2,9 +2,7 @@ package com.example.john.assignment2;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +19,8 @@ public class MajorsFragment extends ListFragment implements AdapterView.OnItemCl
     View view;
     Button cancelButton;
     Button backButton;
-    private static final String cancelButtonString = "cancel";
-    private static final String backButtonString = "back";
+    private static final String CANCEL_BUTTON_STRING = "cancel";
+    private static final String BACK_BUTTON_STRING = "back";
 
 
     public MajorsFragment() {
@@ -35,13 +33,14 @@ public class MajorsFragment extends ListFragment implements AdapterView.OnItemCl
         cancelButton = (Button) view.findViewById(R.id.cancel_button);
         backButton = (Button) view.findViewById(R.id.back_button);
         ButtonPressedListener listener = (ButtonPressedListener)getActivity();
+
         cancelButton.setOnClickListener(view -> {
-            listener.buttonPressed(cancelButtonString);
+            listener.buttonPressed(CANCEL_BUTTON_STRING);
         });
+
         backButton.setOnClickListener(view1 -> {
-            listener.buttonPressed(backButtonString);
+            listener.buttonPressed(BACK_BUTTON_STRING);
         });
-        //backButton.setOnClickListener(this);
         return view;
     }
 
@@ -65,23 +64,23 @@ public class MajorsFragment extends ListFragment implements AdapterView.OnItemCl
         switch (degreeIndex){
             case 0:
                 majors = getResources().getStringArray(R.array.doctor_of_philosophy);
-                prefix = "Ph.D";
+                prefix = getResources().getString(R.string.phd_prefix);
                 break;
             case 1:
                 majors = getResources().getStringArray(R.array.doctor_of_education);
-                prefix = "Ed.D";
+                prefix = getResources().getString(R.string.edd_prefix);
                 break;
             case 2:
                 majors = getResources().getStringArray(R.array.master_of_arts);
-                prefix = "MA";
+                prefix = getResources().getString(R.string.ma_prefix);
                 break;
             case 3:
                 majors = getActivity().getResources().getStringArray(R.array.master_of_science);
-                prefix = "MS";
+                prefix = getResources().getString(R.string.ms_prefix);
                 break;
             case 4:
                 majors = getResources().getStringArray(R.array.master_of_fine_arts);
-                prefix = "MFA";
+                prefix = getResources().getString(R.string.mfa_prefix);
                 break;
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, majors);
@@ -96,11 +95,11 @@ public class MajorsFragment extends ListFragment implements AdapterView.OnItemCl
 
 
     public interface MajorSelectionListener{
-        public void majorSelected(String majorSelected);
+        void majorSelected(String majorSelected);
     }
 
     public interface ButtonPressedListener{
-        public void buttonPressed(String buttonPressed);
+        void buttonPressed(String buttonPressed);
     }
 
 }

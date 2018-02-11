@@ -9,6 +9,12 @@
     <string name="done_button">Done</string>
     <string name="cancel_button">Cancel</string>
     <string name="major_textField">Major: </string>
+    <string name="phd_prefix">Ph.D</string>
+    <string name="edd_prefix">Ed.D</string>
+    <string name="ma_prefix">MA</string>
+    <string name="ms_prefix">MS</string>
+    <string name="mfa_prefix">MFA</string>
+
 
 
 

@@ -27,29 +27,15 @@ public class PersonalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
 
-        SharedPreferences values = getSharedPreferences(VALUES, 0);
-
-        firstName = (EditText) findViewById(R.id.first_name);
-        lastName = (EditText) findViewById(R.id.last_name);
-        age = (EditText) findViewById(R.id.age);
-        email = (EditText) findViewById(R.id.email);
-        phoneNumber = (EditText) findViewById(R.id.phone_number);
-        major = (TextView) findViewById(R.id.major);
-        selectMajor = (Button) findViewById(R.id.select_major);
-        done = (Button)findViewById(R.id.done_button);
-
-        firstName.setText(values.getString("firstName", ""));
-        lastName.setText(values.getString("lastName", ""));
-        age.setText(values.getString("age", ""));
-        email.setText(values.getString("email", ""));
-        phoneNumber.setText(values.getString("phoneNumber", ""));
-        major.setText(values.getString("major", ""));
+        setWidgets();
+        loadValuesFromPreferences();
 
         selectMajor.setOnClickListener((View v) -> {
             Intent toMajorSelection = new Intent(this, MajorSelectionActivity.class);
             startActivityForResult(toMajorSelection, INTENT_REQUEST);
         });
         done.setOnClickListener((View v) -> {
+            saveValuesToPreferences();
             finish();
         });
 
@@ -70,8 +56,7 @@ public class PersonalActivity extends AppCompatActivity {
 
     }
 
-    protected void onStop(){
-        super.onStop();
+    protected void saveValuesToPreferences(){
         SharedPreferences values = getSharedPreferences(VALUES, 0);
         SharedPreferences.Editor editor = values.edit();
         editor.putString("firstName", String.valueOf(firstName.getText()));
@@ -82,6 +67,28 @@ public class PersonalActivity extends AppCompatActivity {
         editor.putString("major", String.valueOf(major.getText()));
 
         editor.commit();
+    }
+
+    private void setWidgets(){
+        firstName = (EditText) findViewById(R.id.first_name);
+        lastName = (EditText) findViewById(R.id.last_name);
+        age = (EditText) findViewById(R.id.age);
+        email = (EditText) findViewById(R.id.email);
+        phoneNumber = (EditText) findViewById(R.id.phone_number);
+        major = (TextView) findViewById(R.id.major);
+        selectMajor = (Button) findViewById(R.id.select_major);
+        done = (Button)findViewById(R.id.done_button);
+    }
+
+    private void loadValuesFromPreferences(){
+        SharedPreferences values = getSharedPreferences(VALUES, 0);
+
+        firstName.setText(values.getString("firstName", ""));
+        lastName.setText(values.getString("lastName", ""));
+        age.setText(values.getString("age", ""));
+        email.setText(values.getString("email", ""));
+        phoneNumber.setText(values.getString("phoneNumber", ""));
+        major.setText(values.getString("major", ""));
     }
 }
 

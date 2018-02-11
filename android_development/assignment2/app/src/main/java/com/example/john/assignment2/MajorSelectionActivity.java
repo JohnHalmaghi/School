@@ -12,18 +12,13 @@ public class MajorSelectionActivity extends AppCompatActivity implements Advance
                                                                          MajorsFragment.MajorSelectionListener,
                                                                          MajorsFragment.ButtonPressedListener{
 
-    protected int degreeIndexSelected;
     protected String majorSelection;
-    private Button cancelButton;
-    private Button doneButton;
-    private boolean cancelButtonPressed;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_major_selection);
-        cancelButton = (Button)findViewById(R.id.cancel_button);
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction degreeFragmentTransaction = fragmentManager.beginTransaction();
         AdvancedDegreeFragment advancedDegreeFragment = new AdvancedDegreeFragment();
@@ -33,8 +28,6 @@ public class MajorSelectionActivity extends AppCompatActivity implements Advance
 
     @Override
     public void degreeChosen(int degreeIndex) {
-        //MajorsFragment majorsFragment = (MajorsFragment)getSupportFragmentManager().findFragmentById(android.R.id.majors_fragment);
-
         MajorsFragment majorsFrag = new MajorsFragment();
         Bundle args = new Bundle();
         args.putInt(MajorsFragment.ARG_POSITION, degreeIndex);
